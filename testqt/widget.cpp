@@ -69,6 +69,7 @@ void Widget::keyPressEvent(QKeyEvent *event)
 
 void Widget::on_rec_clicked()
 {
+    stopTimer();
     record = 1;
     ui->rec->setEnabled(false);
 }
