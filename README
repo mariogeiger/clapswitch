@@ -1,1 +1,10 @@
 Dans sa première version le programme attend un temps défini pour séparer un rythme d'un autre.
+
+appuie sur le bouton rec.
+attends le premier clap
+enregistre les clap
+si pandant X temps il n'y a pas de clap, il arrête d'enregistrer
+
+enregistre les clap proche des moins de X temps.
+si le nombre correspond au nombre enrgistré
+compare avec une tolérance et avec une gestion du changement du tempo.
