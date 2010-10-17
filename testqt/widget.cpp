@@ -127,5 +127,7 @@ void Widget::compare()
 
     }
 
-    ui->power->setChecked(!ui->power->isChecked());
+    static uint8_t on = 0;
+    on = !on;
+    ui->power->setText(on ? "Power ON" : "Power OFF");
 }
