@@ -83,14 +83,14 @@ void Widget::timercounter()
 
 void Widget::startTimer()
 {
-//    qDebug("timer start");
+    ui->led->setText("listening...");
     counter = 0;
     timer->start();
 }
 
 void Widget::stopTimer()
 {
-    qDebug("timer stop");
+    ui->led->clear();
     timer->stop();
     record = 0;
     ui->rec->setEnabled(true);
