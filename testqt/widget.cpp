@@ -99,16 +99,11 @@ void Widget::stopTimer()
 
 void Widget::compare()
 {
-    qDebug("compare");
-
-    uint8_t rec_first = rec_beat[0];
-    uint8_t tmp_first = tmp_beat[0];
-
     uint8_t i;
 
     for (i = 1; i < rec_size; ++i) {
-        uint16_t m = rec_first * tmp_beat[i];
-        uint16_t n = tmp_first * rec_beat[i];
+        uint16_t m = rec_beat[0] * tmp_beat[i];
+        uint16_t n = tmp_beat[0] * rec_beat[i];
 
         uint16_t dif;
         if (m > n)
