@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Widget</string>
+   <string>Clap Switch</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -22,12 +22,17 @@
     </widget>
    </item>
    <item>
-    <widget class="QCheckBox" name="power">
-     <property name="enabled">
-      <bool>false</bool>
+    <widget class="QLabel" name="power">
+     <property name="font">
+      <font>
+       <pointsize>30</pointsize>
+      </font>
      </property>
      <property name="text">
-      <string>POWER</string>
+      <string>Power OFF</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </item>
