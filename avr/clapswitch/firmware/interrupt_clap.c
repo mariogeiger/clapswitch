@@ -71,8 +71,8 @@ ISR(INT0_vect)
 
 void initialize_interrupt_clap()
 {
-	EICRA |= (1<<ISC01) | (1<<ISC00); // rising edge	
+	EICRA = (1<<ISC01) | (1<<ISC00); // rising edge	
 	EIMSK = (1<<INT0); // int0 enabled
 	
-	SREG = 0x80; // ?
+	SREG  = 0x80; // ?
 }

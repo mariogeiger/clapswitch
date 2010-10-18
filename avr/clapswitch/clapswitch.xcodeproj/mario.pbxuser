@@ -14,7 +14,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					341,
+					329,
 					20,
 					48,
 					43,
@@ -31,17 +31,19 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 309089572;
-			PBXWorkspaceStateSaveDate = 309089572;
+			PBXPerProjectTemplateStateSaveDate = 309129255;
+			PBXWorkspaceStateSaveDate = 309129255;
 		};
 		perUserProjectItems = {
-			AC56A38E126C795300C61664 /* PBXTextBookmark */ = AC56A38E126C795300C61664 /* PBXTextBookmark */;
-			AC56A38F126C795300C61664 /* PBXTextBookmark */ = AC56A38F126C795300C61664 /* PBXTextBookmark */;
-			AC56A390126C795300C61664 /* PBXTextBookmark */ = AC56A390126C795300C61664 /* PBXTextBookmark */;
-			AC56A391126C795300C61664 /* PBXTextBookmark */ = AC56A391126C795300C61664 /* PBXTextBookmark */;
-			AC56A392126C795300C61664 /* PBXTextBookmark */ = AC56A392126C795300C61664 /* PBXTextBookmark */;
-			AC56A393126C795300C61664 /* PBXTextBookmark */ = AC56A393126C795300C61664 /* PBXTextBookmark */;
-			AC56A394126C795300C61664 /* PBXTextBookmark */ = AC56A394126C795300C61664 /* PBXTextBookmark */;
+			ACC19273126CF81400AC8F6C /* PBXTextBookmark */ = ACC19273126CF81400AC8F6C /* PBXTextBookmark */;
+			ACC19274126CF81400AC8F6C /* PBXTextBookmark */ = ACC19274126CF81400AC8F6C /* PBXTextBookmark */;
+			ACC19275126CF81400AC8F6C /* PBXTextBookmark */ = ACC19275126CF81400AC8F6C /* PBXTextBookmark */;
+			ACC19276126CF81400AC8F6C /* PBXTextBookmark */ = ACC19276126CF81400AC8F6C /* PBXTextBookmark */;
+			ACC19278126CF81400AC8F6C /* PBXTextBookmark */ = ACC19278126CF81400AC8F6C /* PBXTextBookmark */;
+			ACC19279126CF81400AC8F6C /* PBXTextBookmark */ = ACC19279126CF81400AC8F6C /* PBXTextBookmark */;
+			ACC1927A126CF81400AC8F6C /* PBXTextBookmark */ = ACC1927A126CF81400AC8F6C /* PBXTextBookmark */;
+			ACC1927B126CF81400AC8F6C /* PBXTextBookmark */ = ACC1927B126CF81400AC8F6C /* PBXTextBookmark */;
+			ACC1927D126CF81400AC8F6C /* PBXTextBookmark */ = ACC1927D126CF81400AC8F6C /* PBXTextBookmark */;
 			ACD06AB8126C4DE400C0E8A7 /* PBXTextBookmark */ = ACD06AB8126C4DE400C0E8A7 /* PBXTextBookmark */;
 			ACF66C4C126B9AF600DF5BE4 /* PBXTextBookmark */ = ACF66C4C126B9AF600DF5BE4 /* PBXTextBookmark */;
 			ACF66C53126B9BEF00DF5BE4 /* PBXTextBookmark */ = ACF66C53126B9BEF00DF5BE4 /* PBXTextBookmark */;
@@ -54,17 +56,17 @@
 	};
 	4079525E0CEA38CC00E202DC /* main.c */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {519, 728}}";
+			sepNavIntBoundsRect = "{{0, 0}, {507, 780}}";
 			sepNavSelRange = "{371, 0}";
-			sepNavVisRange = "{0, 501}";
+			sepNavVisRange = "{0, 907}";
 			sepNavWindowFrame = "{{15, 30}, {677, 743}}";
 		};
 	};
 	4079525F0CEA38CC00E202DC /* Makefile */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {593, 1352}}";
-			sepNavSelRange = "{902, 0}";
-			sepNavVisRange = "{2895, 655}";
+			sepNavIntBoundsRect = "{{0, 0}, {593, 1417}}";
+			sepNavSelRange = "{3450, 0}";
+			sepNavVisRange = "{2156, 1628}";
 		};
 	};
 	407952600CEA391500E202DC /* firmware */ = {
@@ -72,88 +74,129 @@
 	};
 	AC56A377126C6FA200C61664 /* interrupt_clap.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {519, 481}}";
+			sepNavIntBoundsRect = "{{0, 0}, {507, 640}}";
 			sepNavSelRange = "{376, 0}";
-			sepNavVisRange = "{131, 392}";
+			sepNavVisRange = "{0, 519}";
 		};
 	};
 	AC56A378126C6FA200C61664 /* interrupt_clap.c */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {519, 1066}}";
-			sepNavSelRange = "{656, 0}";
-			sepNavVisRange = "{607, 383}";
+			sepNavIntBoundsRect = "{{0, 0}, {507, 1027}}";
+			sepNavSelRange = "{1127, 0}";
+			sepNavVisRange = "{429, 713}";
 			sepNavWindowFrame = "{{15, 30}, {677, 743}}";
 		};
 	};
-	AC56A38E126C795300C61664 /* PBXTextBookmark */ = {
+	ACC19273126CF81400AC8F6C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4079525E0CEA38CC00E202DC /* main.c */;
+		name = "main.c: 20";
+		rLen = 0;
+		rLoc = 371;
+		rType = 0;
+		vrLen = 907;
+		vrLoc = 0;
+	};
+	ACC19274126CF81400AC8F6C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC56A378126C6FA200C61664 /* interrupt_clap.c */;
+		name = "interrupt_clap.c: 77";
+		rLen = 0;
+		rLoc = 1127;
+		rType = 0;
+		vrLen = 713;
+		vrLoc = 429;
+	};
+	ACC19275126CF81400AC8F6C /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = AC56A377126C6FA200C61664 /* interrupt_clap.h */;
-		name = "interrupt_clap.h: 25";
+		name = "interrupt_clap.h: 24";
 		rLen = 0;
 		rLoc = 376;
 		rType = 0;
-		vrLen = 392;
-		vrLoc = 131;
-	};
-	AC56A38F126C795300C61664 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 4079525F0CEA38CC00E202DC /* Makefile */;
-		name = "Makefile: 20";
-		rLen = 0;
-		rLoc = 902;
-		rType = 0;
-		vrLen = 655;
-		vrLoc = 2895;
-	};
-	AC56A390126C795300C61664 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = AC56A378126C6FA200C61664 /* interrupt_clap.c */;
-		name = "interrupt_clap.c: 45";
-		rLen = 0;
-		rLoc = 656;
-		rType = 0;
-		vrLen = 383;
-		vrLoc = 607;
-	};
-	AC56A391126C795300C61664 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = ACFEC008126C2F0900F3DDA5 /* timer_beat.c */;
-		name = "timer_beat.c: 12";
-		rLen = 8;
-		rLoc = 153;
-		rType = 0;
-		vrLen = 382;
+		vrLen = 519;
 		vrLoc = 0;
 	};
-	AC56A392126C795300C61664 /* PBXTextBookmark */ = {
+	ACC19276126CF81400AC8F6C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ACC19277126CF81400AC8F6C /* t1.s */;
+		name = "t1.s: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2116;
+		vrLoc = 0;
+	};
+	ACC19277126CF81400AC8F6C /* t1.s */ = {
+		isa = PBXFileReference;
+		name = t1.s;
+		path = "/Users/mario/Documents/clapswitch/avr/clapswitch/firmware/tests-asm/t1.s";
+		sourceTree = "<absolute>";
+	};
+	ACC19278126CF81400AC8F6C /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = ACFEC007126C2F0900F3DDA5 /* timer_beat.h */;
 		name = "timer_beat.h: 21";
 		rLen = 0;
 		rLoc = 366;
 		rType = 0;
-		vrLen = 420;
+		vrLen = 419;
 		vrLoc = 0;
 	};
-	AC56A393126C795300C61664 /* PBXTextBookmark */ = {
+	ACC19279126CF81400AC8F6C /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 4079525E0CEA38CC00E202DC /* main.c */;
-		name = "main.c: 21";
+		fRef = ACFEC008126C2F0900F3DDA5 /* timer_beat.c */;
+		name = "timer_beat.c: 19";
 		rLen = 0;
-		rLoc = 371;
+		rLoc = 249;
 		rType = 0;
-		vrLen = 499;
-		vrLoc = 340;
-	};
-	AC56A394126C795300C61664 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 4079525E0CEA38CC00E202DC /* main.c */;
-		name = "main.c: 21";
-		rLen = 0;
-		rLoc = 371;
-		rType = 0;
-		vrLen = 501;
+		vrLen = 380;
 		vrLoc = 0;
+	};
+	ACC1927A126CF81400AC8F6C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4079525F0CEA38CC00E202DC /* Makefile */;
+		name = "Makefile: 77";
+		rLen = 0;
+		rLoc = 3450;
+		rType = 0;
+		vrLen = 1628;
+		vrLoc = 2156;
+	};
+	ACC1927B126CF81400AC8F6C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ACC1927C126CF81400AC8F6C /* main.s */;
+		rLen = 0;
+		rLoc = 9223372036854775807;
+		rType = 0;
+	};
+	ACC1927C126CF81400AC8F6C /* main.s */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.asm;
+		name = main.s;
+		path = /Users/mario/Documents/clapswitch/avr/clapswitch/firmware/main.s;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {507, 1430}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{878, 586}";
+		};
+	};
+	ACC1927D126CF81400AC8F6C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ACC1927E126CF81400AC8F6C /* main.s */;
+		name = "main.s: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 586;
+		vrLoc = 878;
+	};
+	ACC1927E126CF81400AC8F6C /* main.s */ = {
+		isa = PBXFileReference;
+		name = main.s;
+		path = /Users/mario/Documents/clapswitch/avr/clapswitch/firmware/main.s;
+		sourceTree = "<absolute>";
 	};
 	ACD06AB8126C4DE400C0E8A7 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -222,17 +265,17 @@
 	};
 	ACFEC007126C2F0900F3DDA5 /* timer_beat.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {519, 367}}";
+			sepNavIntBoundsRect = "{{0, 0}, {507, 640}}";
 			sepNavSelRange = "{366, 0}";
-			sepNavVisRange = "{0, 420}";
+			sepNavVisRange = "{0, 419}";
 			sepNavWindowFrame = "{{15, 30}, {677, 743}}";
 		};
 	};
 	ACFEC008126C2F0900F3DDA5 /* timer_beat.c */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {519, 367}}";
-			sepNavSelRange = "{153, 8}";
-			sepNavVisRange = "{0, 382}";
+			sepNavIntBoundsRect = "{{0, 0}, {507, 640}}";
+			sepNavSelRange = "{249, 0}";
+			sepNavVisRange = "{0, 380}";
 			sepNavWindowFrame = "{{168, 32}, {677, 743}}";
 		};
 	};
