@@ -1,3 +1,5 @@
 *.pro.user
 *-build-desktop
 *.build
+*.o
+*.elf
