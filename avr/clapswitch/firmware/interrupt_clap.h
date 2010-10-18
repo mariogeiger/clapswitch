@@ -17,19 +17,15 @@
 #define RUNNING  2
 extern uint8_t record_state;
 
-
 #define MAXIMUM_BEAT 20
 extern uint8_t rec_beat[];
 extern uint8_t rec_size;
 
-
 extern uint8_t tmp_beat[];
 extern uint8_t tmp_size;
 
-
 #define NEEDCOMPARE 0
 extern uint8_t flag_clap;
-
 
 void initialize_interrupt_clap();
 

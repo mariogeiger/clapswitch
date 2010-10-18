@@ -22,7 +22,7 @@ uint8_t flag_clap;
 
 ISR(INT0_vect)
 {
-	if (TIMER_BEAT_ISRUNNING) {
+	if (!TIMER_BEAT_ISRUNNING) {
 		
 		START_TIMER_BEAT;
 		

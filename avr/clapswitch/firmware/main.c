@@ -9,9 +9,13 @@
 #include "timer_beat.h"
 #include "interrupt_clap.h"
 
+	//! tolerance in per cent
+#define TOLERANCE 50
+
 uint8_t i;
 uint16_t m, n;
 uint16_t d;
+uint8_t fail;
 
 int main(void)
 {
@@ -32,6 +36,7 @@ int main(void)
 		if (flag_clap & (1<<NEEDCOMPARE)) {
 			flag_clap &= ~(1<<NEEDCOMPARE);
 			
+			fail = 0;
 			for (i = 1; i < rec_size; ++i) {
 				m = rec_beat[i - 1] * tmp_beat[i];
 				n = tmp_beat[i - 1] * rec_beat[i];
@@ -41,13 +46,16 @@ int main(void)
 				else
 					d = n - m;
 								
-				if (d > (m + n) / 4) {
+				if (d > (m + n) / (200 / TOLERANCE)) {
 						// test fail
-					return;
+					fail = 1;
+					break;
 				}
 			}
 				// test passed
-			PORTC ^= (1<<3);			
+			if (!fail) {
+				PORTC ^= (1<<3);
+			}
 		}
     }
 

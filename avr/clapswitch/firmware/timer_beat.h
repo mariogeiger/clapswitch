@@ -22,5 +22,4 @@ extern volatile uint8_t beat;
 
 void initialize_timer_beat();
 
-
 #endif
