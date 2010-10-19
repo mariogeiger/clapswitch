@@ -61,6 +61,7 @@ void Widget::keyPressEvent(QKeyEvent *event)
         if (!TIMER_BEAT_ISRUNNING) {
 
             START_TIMER_BEAT;
+            beat = 0;
 
             switch (record_state) {
             case DISABLED:

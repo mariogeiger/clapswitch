@@ -10,23 +10,24 @@
 #include "interrupt_clap.h"
 #include "timer_beat.h"
 
+volatile uint8_t record_state;
+
 uint8_t EEMEM eep_beat[MAXIMUM_BEAT];
 uint8_t EEMEM eep_size;
 
-uint8_t rec_beat[MAXIMUM_BEAT];
-uint8_t rec_size;
+volatile uint8_t rec_beat[MAXIMUM_BEAT];
+volatile uint8_t rec_size;
 
-uint8_t tmp_beat[MAXIMUM_BEAT];
-uint8_t tmp_size;
+volatile uint8_t tmp_beat[MAXIMUM_BEAT];
+volatile uint8_t tmp_size;
 
-uint8_t record_state;
-
-uint8_t flag_clap;
+volatile uint8_t flag_clap;
 
 ISR(INT0_vect)
 {
 	if (!TIMER_BEAT_ISRUNNING) {
 		
+		beat = 0;
 		START_TIMER_BEAT;
 		
 		switch (record_state) {
