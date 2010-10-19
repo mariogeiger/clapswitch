@@ -9,6 +9,7 @@
 
 #include <avr/io.h>
 #include <avr/eeprom.h>
+#include "in_out.h"
 #include "timer_beat.h"
 #include "interrupt_clap.h"
 
@@ -21,32 +22,34 @@ uint16_t delta;
 uint8_t fail;
 
 int main(void)
-{	
+{
+	initialize_in_out();
+	
 	initialize_timer_beat();
 	
 	initialize_interrupt_clap();
 	
-	DDRC  =          (1<<3) | (1<<4); // button | switch | led rec
-	PORTC = (1<<2) | (1<<3) | (1<<4); // pullup |  off   |   off
-
 	eeprom_busy_wait();
+	
 	rec_size = eeprom_read_byte(&eep_size);
-	for (i = 0; i < rec_size; ++i) {
+	
+	for (i = 0; i < rec_size; ++i)
 		rec_beat[i] = eeprom_read_byte(&eep_beat[i]);
-	}
 	
 	sei();
 	
-    for(;;){
-		if (PINC & (1<<2)) {
+    
+	for(;;){
+		if (BUTTONPUSHED) {
 			STOP_TIMER_BEAT;
 			record_state = PENDING;
 		}
 		
-		if (record_state == RUNNING)
-			PORTC &= ~(1<<4);
-		else
-			PORTC |= (1<<4);
+		if (record_state == RUNNING) {
+			RECLEDON;
+		} else {
+			RECLEDOFF;
+		}
 		
 		if (flag_clap & (1<<NEEDCOMPARE)) {
 			flag_clap &= ~(1<<NEEDCOMPARE);
@@ -69,7 +72,7 @@ int main(void)
 			}
 				// test passed
 			if (!fail) {
-				PORTC ^= (1<<3);
+				SWITCHOPTO;
 			}
 		}
     }

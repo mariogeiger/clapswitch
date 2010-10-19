@@ -11,6 +11,8 @@
 		4079525F0CEA38CC00E202DC /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		AC56A377126C6FA200C61664 /* interrupt_clap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interrupt_clap.h; sourceTree = "<group>"; };
 		AC56A378126C6FA200C61664 /* interrupt_clap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = interrupt_clap.c; sourceTree = "<group>"; };
+		ACC24D59126E11260003C0CD /* in_out.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = in_out.h; sourceTree = "<group>"; };
+		ACC24D5A126E11260003C0CD /* in_out.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = in_out.c; sourceTree = "<group>"; };
 		ACFEC007126C2F0900F3DDA5 /* timer_beat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timer_beat.h; sourceTree = "<group>"; };
 		ACFEC008126C2F0900F3DDA5 /* timer_beat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = timer_beat.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,6 +34,8 @@
 				ACFEC008126C2F0900F3DDA5 /* timer_beat.c */,
 				AC56A377126C6FA200C61664 /* interrupt_clap.h */,
 				AC56A378126C6FA200C61664 /* interrupt_clap.c */,
+				ACC24D59126E11260003C0CD /* in_out.h */,
+				ACC24D5A126E11260003C0CD /* in_out.c */,
 			);
 			path = firmware;
 			sourceTree = "<group>";
