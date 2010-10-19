@@ -8,6 +8,7 @@
  */
 
 #include "timer_beat.h"
+#include "in_out.h"
 
 volatile uint8_t beat;
 
@@ -16,6 +17,7 @@ ISR(TIMER0_COMPA_vect)
 	beat++;
 	if (beat == 0) {
 		STOP_TIMER_BEAT;
+		RECLEDOFF;
 	}
 }
 

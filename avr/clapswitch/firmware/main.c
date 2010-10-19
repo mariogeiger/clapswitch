@@ -43,14 +43,10 @@ int main(void)
 		if (BUTTONPUSHED) {
 			STOP_TIMER_BEAT;
 			record_state = PENDING;
-		}
-		
-		if (record_state == RUNNING) {
+			
 			RECLEDON;
-		} else {
-			RECLEDOFF;
 		}
-		
+				
 		if (flag_clap & (1<<NEEDCOMPARE)) {
 			flag_clap &= ~(1<<NEEDCOMPARE);
 			
