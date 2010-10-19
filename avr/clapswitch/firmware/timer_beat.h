@@ -3,7 +3,7 @@
  *  clapswitch
  *
  *  Created by Mario on 18.10.10.
- *  Copyright 2010 aucune. All rights reserved.
+ *  Copyright 2010. All rights reserved.
  *
  */
 

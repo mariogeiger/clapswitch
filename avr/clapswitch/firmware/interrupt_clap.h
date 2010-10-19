@@ -3,7 +3,7 @@
  *  clapswitch
  *
  *  Created by Mario on 18.10.10.
- *  Copyright 2010 aucune. All rights reserved.
+ *  Copyright 2010. All rights reserved.
  *
  */
 
@@ -11,6 +11,7 @@
 #define INTERRUPT_CLAP_H
 
 #include <avr/interrupt.h>
+#include <avr/eeprom.h>
 
 #define DISABLED 0
 #define PENDING  1
@@ -18,6 +19,9 @@
 extern uint8_t record_state;
 
 #define MAXIMUM_BEAT 20
+extern uint8_t EEMEM eep_beat[];
+extern uint8_t EEMEM eep_size;
+
 extern uint8_t rec_beat[];
 extern uint8_t rec_size;
 

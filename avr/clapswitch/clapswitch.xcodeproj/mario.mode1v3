@@ -197,7 +197,48 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array/>
+	<array>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>ACAD2952126D9732009D06FA</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>main.c</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>ACAD2953126D9732009D06FA</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>main.c</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>ACAD2954126D9732009D06FA</string>
+						<key>history</key>
+						<array>
+							<string>ACAD293F126D7E6A009D06FA</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {677, 646}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>459 91 677 687 0 0 1280 778 </string>
+			</dict>
+		</dict>
+	</array>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -270,7 +311,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>2</integer>
+									<integer>7</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -313,7 +354,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>main.s</string>
+								<string>interrupt_clap.c</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -321,11 +362,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>main.s</string>
+										<string>interrupt_clap.c</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>ACC1927D126CF81400AC8F6C</string>
+										<string>ACAD294F126D9732009D06FA</string>
 										<key>history</key>
 										<array>
 											<string>ACF66C4C126B9AF600DF5BE4</string>
@@ -333,14 +374,12 @@
 											<string>ACFEC00F126C3FE400F3DDA5</string>
 											<string>ACFEC011126C3FE400F3DDA5</string>
 											<string>ACD06AB8126C4DE400C0E8A7</string>
-											<string>ACC19273126CF81400AC8F6C</string>
-											<string>ACC19274126CF81400AC8F6C</string>
-											<string>ACC19275126CF81400AC8F6C</string>
-											<string>ACC19276126CF81400AC8F6C</string>
-											<string>ACC19278126CF81400AC8F6C</string>
-											<string>ACC19279126CF81400AC8F6C</string>
 											<string>ACC1927A126CF81400AC8F6C</string>
-											<string>ACC1927B126CF81400AC8F6C</string>
+											<string>ACAD294A126D9732009D06FA</string>
+											<string>ACAD294B126D9732009D06FA</string>
+											<string>ACAD294C126D9732009D06FA</string>
+											<string>ACAD294D126D9732009D06FA</string>
+											<string>ACAD294E126D9732009D06FA</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -398,9 +437,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>ACC1927F126CF81400AC8F6C</string>
+				<string>ACAD2950126D9732009D06FA</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>ACC19280126CF81400AC8F6C</string>
+				<string>ACAD2951126D9732009D06FA</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -539,6 +578,7 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>ACF66C40126B9A7600DF5BE4</string>
+		<string>ACAD2952126D9732009D06FA</string>
 		<string>/Users/mario/Documents/clapswitch/avr/clapswitch/clapswitch.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -580,6 +620,8 @@
 							<string>218pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -619,7 +661,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>ACF66C40126B9A7600DF5BE4</string>
-				<string>ACC19281126CF81400AC8F6C</string>
+				<string>ACAD2945126D83AF009D06FA</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

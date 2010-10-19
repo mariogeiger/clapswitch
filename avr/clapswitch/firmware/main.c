@@ -1,7 +1,10 @@
-/* Name: main.c
- * Author: <insert your name here>
- * Copyright: <insert your copyright message here>
- * License: <insert your license reference here>
+/*
+ *  main.c
+ *  clapswitch
+ *
+ *  Created by Mario on 18.10.10.
+ *  Copyright 2010. All rights reserved.
+ *
  */
 
 #include <avr/io.h>
@@ -18,12 +21,18 @@ uint16_t d;
 uint8_t fail;
 
 int main(void)
-{
+{	
 	initialize_timer_beat();
 	
 	initialize_interrupt_clap();
 	
 	DDRC |= (1<<3); // switch on/off
+
+	eeprom_busy_wait();
+	rec_size = eeprom_read_byte(&eep_size);
+	for (i = 0; i < rec_size; ++i) {
+		rec_beat[i] = eeprom_read_byte(&eep_beat[i]);
+	}
 	
 	sei();
 	

@@ -3,12 +3,15 @@
  *  clapswitch
  *
  *  Created by Mario on 18.10.10.
- *  Copyright 2010 aucune. All rights reserved.
+ *  Copyright 2010. All rights reserved.
  *
  */
 
 #include "interrupt_clap.h"
 #include "timer_beat.h"
+
+uint8_t EEMEM eep_beat[MAXIMUM_BEAT];
+uint8_t EEMEM eep_size;
 
 uint8_t rec_beat[MAXIMUM_BEAT];
 uint8_t rec_size;
@@ -27,9 +30,11 @@ ISR(INT0_vect)
 		START_TIMER_BEAT;
 		
 		switch (record_state) {
-			case DISABLED:
 			case RUNNING:
 				record_state = DISABLED;
+				if (eeprom_is_ready())
+					eeprom_write_byte(&eep_size, rec_size);
+			case DISABLED:
 				tmp_size = 0;
 				break;
 			case PENDING:
@@ -45,6 +50,9 @@ ISR(INT0_vect)
 		if (record_state == RUNNING) {
 			
 			rec_beat[rec_size] = beat;
+			if (eeprom_is_ready())
+				eeprom_write_byte(&eep_beat[rec_size], beat);
+			
 			rec_size++;
 			
 			beat = 0;
