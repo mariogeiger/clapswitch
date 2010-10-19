@@ -8,7 +8,7 @@
  */
 
 #include <avr/io.h>
-#include <avr/interrupt.h>
+#include <avr/eeprom.h>
 #include "timer_beat.h"
 #include "interrupt_clap.h"
 
@@ -17,7 +17,7 @@
 
 uint8_t i;
 uint16_t m, n;
-uint16_t d;
+uint16_t delta;
 uint8_t fail;
 
 int main(void)
@@ -26,7 +26,8 @@ int main(void)
 	
 	initialize_interrupt_clap();
 	
-	DDRC |= (1<<3); // switch on/off
+	DDRC  =          (1<<3) | (1<<4); // button | switch | led rec
+	PORTC = (1<<2) | (1<<3) | (1<<4); // pullup |  off   |   off
 
 	eeprom_busy_wait();
 	rec_size = eeprom_read_byte(&eep_size);
@@ -42,6 +43,11 @@ int main(void)
 			record_state = PENDING;
 		}
 		
+		if (record_state == RUNNING)
+			PORTC &= ~(1<<4);
+		else
+			PORTC |= (1<<4);
+		
 		if (flag_clap & (1<<NEEDCOMPARE)) {
 			flag_clap &= ~(1<<NEEDCOMPARE);
 			
@@ -51,11 +57,11 @@ int main(void)
 				n = tmp_beat[i - 1] * rec_beat[i];
 				
 				if (m > n)
-					d = m - n;
+					delta = m - n;
 				else
-					d = n - m;
+					delta = n - m;
 								
-				if (d > (m + n) / (200 / TOLERANCE)) {
+				if (delta > (m + n) / (200 / TOLERANCE)) {
 						// test fail
 					fail = 1;
 					break;

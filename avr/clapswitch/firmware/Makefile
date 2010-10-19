@@ -57,7 +57,7 @@ FUSES      = -U hfuse:w:0xd9:m -U lfuse:w:0x24:m
 #        +-------------------- BODLEVEL (if 0: 4V, if 1: 2.7V)
 
 
-# Tune the lines below only if you know what you are doing::
+# Tune the lines below only if you know what you are doing:
 
 AVRDUDE = avrdude $(PROGRAMMER) -p $(DEVICE)
 COMPILE = avr-gcc -Wall -O3 -DF_CPU=$(CLOCK) -mmcu=$(DEVICE)
