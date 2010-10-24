@@ -19,7 +19,7 @@ DEVICE     = atmega48
 CLOCK      = 8000000
 #PROGRAMMER = -c stk500v2 -P avrdoper
 PROGRAMMER = -c stk500v2 -P /dev/ttyUSB0
-OBJECTS    = main.o interrupt_clap.o timer_beat.o in_out.o
+OBJECTS    = main.o interrupt_clap.o timer_beat.o in_out.o compare.o global.o
 FUSES      = -U hfuse:w:0xd9:m -U lfuse:w:0x24:m
 # ATMega8 fuse bits (fuse bits for other devices are different!):
 # Example for 8 MHz internal oscillator
