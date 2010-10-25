@@ -41,5 +41,5 @@ void compare()
 		}
 	}
 		// test passed
-	SWITCHOPTO;
+	OPTOSW;
 }

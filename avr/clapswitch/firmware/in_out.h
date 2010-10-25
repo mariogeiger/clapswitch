@@ -15,7 +15,7 @@
 #if defined (__AVR_ATmega8515__)
 
 	// opto
-#	define SWITCHOPTO PORTC ^=  (1<<2);
+#	define OPTOSW     PORTC ^=  (1<<2);
 #	define OPTOON     PORTC &= ~(1<<2);
 #	define OPTOOFF    PORTC |=  (1<<2);
 
@@ -27,14 +27,14 @@
 #	define BUTTONPUSHED (~PIND & (1<<1))
 
 	// debug
+#	define DBGLEDSW   PORTC ^=  (1<<0);
 #	define DBGLEDON   PORTC &= ~(1<<0);
 #	define DBGLEDOFF  PORTC |=  (1<<0);
-#	define DBGLEDSW   PORTC ^=  (1<<0);
 
 #elif defined (__AVR_ATmega48__)
 
 	// opto
-#	define SWITCHOPTO PORTC ^=  (1<<2);
+#	define OPTOSW     PORTC ^=  (1<<2);
 #	define OPTOON     PORTC &= ~(1<<2);
 #	define OPTOOFF    PORTC |=  (1<<2);
 
