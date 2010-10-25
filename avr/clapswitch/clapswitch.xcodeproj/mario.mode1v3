@@ -229,8 +229,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -272,7 +270,11 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
+<<<<<<< HEAD
 									<integer>6</integer>
+=======
+									<integer>2</integer>
+>>>>>>> compareall
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -297,7 +299,11 @@
 							<real>186</real>
 						</array>
 						<key>RubberWindowFrame</key>
+<<<<<<< HEAD
 						<string>213 45 776 718 0 0 1280 778 </string>
+=======
+						<string>27 29 776 718 0 0 1280 778 </string>
+>>>>>>> compareall
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -308,12 +314,18 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
+<<<<<<< HEAD
 								<string>interrupt_clap.h</string>
+=======
+								<string>Makefile</string>
+>>>>>>> compareall
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -321,11 +333,19 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
+<<<<<<< HEAD
 										<string>interrupt_clap.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
 										<string>ACEB830F12757A670085DD44</string>
+=======
+										<string>Makefile</string>
+										<key>_historyCapacity</key>
+										<integer>0</integer>
+										<key>bookmark</key>
+										<string>ACEB83671275871E0085DD44</string>
+>>>>>>> compareall
 										<key>history</key>
 										<array>
 											<string>ACF66C4C126B9AF600DF5BE4</string>
@@ -334,8 +354,24 @@
 											<string>ACFEC011126C3FE400F3DDA5</string>
 											<string>ACD06AB8126C4DE400C0E8A7</string>
 											<string>ACC24D7A126E26FA0003C0CD</string>
+<<<<<<< HEAD
 											<string>ACEB830D12757A670085DD44</string>
 											<string>ACEB830E12757A670085DD44</string>
+=======
+											<string>ACEB82DC127558940085DD44</string>
+											<string>ACEB82DD127558940085DD44</string>
+											<string>ACEB8301127579BD0085DD44</string>
+											<string>ACEB8303127579BD0085DD44</string>
+											<string>ACEB831C12757AAE0085DD44</string>
+											<string>ACEB83271275822A0085DD44</string>
+											<string>ACEB833A1275829E0085DD44</string>
+											<string>ACEB833D1275842A0085DD44</string>
+											<string>ACEB8344127584970085DD44</string>
+											<string>ACEB8349127584ED0085DD44</string>
+											<string>ACEB834F127585A00085DD44</string>
+											<string>ACEB8364127586F10085DD44</string>
+											<string>ACEB8365127586F10085DD44</string>
+>>>>>>> compareall
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -349,7 +385,11 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {568, 672}}</string>
 								<key>RubberWindowFrame</key>
+<<<<<<< HEAD
 								<string>213 45 776 718 0 0 1280 778 </string>
+=======
+								<string>27 29 776 718 0 0 1280 778 </string>
+>>>>>>> compareall
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -369,7 +409,11 @@
 								<key>Frame</key>
 								<string>{{0, 677}, {568, 0}}</string>
 								<key>RubberWindowFrame</key>
+<<<<<<< HEAD
 								<string>213 45 776 718 0 0 1280 778 </string>
+=======
+								<string>27 29 776 718 0 0 1280 778 </string>
+>>>>>>> compareall
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -393,9 +437,15 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
+<<<<<<< HEAD
 				<string>ACEB831012757A670085DD44</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
 				<string>ACEB831112757A670085DD44</string>
+=======
+				<string>ACEB83291275822A0085DD44</string>
+				<string>1CE0B1FE06471DED0097A5F4</string>
+				<string>ACEB832A1275822A0085DD44</string>
+>>>>>>> compareall
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -537,7 +587,11 @@
 		<string>/Users/mario/Documents/clapswitch/avr/clapswitch/clapswitch.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
+<<<<<<< HEAD
 	<string>213 45 776 718 0 0 1280 778 </string>
+=======
+	<string>27 29 776 718 0 0 1280 778 </string>
+>>>>>>> compareall
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -614,7 +668,11 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>ACF66C40126B9A7600DF5BE4</string>
+<<<<<<< HEAD
 				<string>ACEB831212757A670085DD44</string>
+=======
+				<string>ACEB832B1275822A0085DD44</string>
+>>>>>>> compareall
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

@@ -9,19 +9,12 @@
 
 #include "interrupt_clap.h"
 #include "timer_beat.h"
-
-volatile uint8_t record_state;
-
-uint8_t EEMEM eep_beat[MAXIMUM_BEAT];
-uint8_t EEMEM eep_size;
-
-volatile uint8_t rec_beat[MAXIMUM_BEAT];
-volatile uint8_t rec_size;
-
-volatile uint8_t tmp_beat[MAXIMUM_BEAT];
-volatile uint8_t tmp_size;
+#include "global.h"
 
 volatile uint8_t flag_clap;
+
+volatile uint8_t tmp_size;
+
 
 ISR(INT0_vect)
 {
@@ -64,24 +57,43 @@ ISR(INT0_vect)
 			
 		} else {
 			
-			tmp_beat[tmp_size] = beat;			
-			tmp_size++;
+			tmp_beat[tmp_pos] = beat;
+			tmp_pos++;
 			
 			beat = 0;
 			
-			if (tmp_size == rec_size) {
-				STOP_TIMER_BEAT;
-				flag_clap |= (1<<NEEDCOMPARE);
+			if (tmp_pos >= MAXIMUM_BEAT) {
+				tmp_pos = 0;
 			}
 			
+			if (tmp_size >= rec_size) {
+				flag_clap |= (1<<NEEDCOMPARE);
+			} else {
+				tmp_size++;
+			}			
 		}
 	}
 }
 
 void initialize_interrupt_clap()
 {
+#if defined (__AVR_ATmega8515__)
+	
+	MCUCR = (1<<ISC01) | (1<<ISC00); // rising edge	
+	GICR = (1<<INT0); // int0 enabled
+	
+	SREG  = 0x80; // ?
+	
+#elif defined (__AVR_ATmega48__)
+	
 	EICRA = (1<<ISC01) | (1<<ISC00); // rising edge	
 	EIMSK = (1<<INT0); // int0 enabled
 	
 	SREG  = 0x80; // ?
+	
+#endif
+
+		
+	flag_clap = 0;
+	tmp_size = 0;
 }

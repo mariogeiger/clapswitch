@@ -7,6 +7,9 @@
  *
  */
 
+#ifndef IN_OUT_H
+#define IN_OUT_H
+
 #include <avr/io.h>
 
 	// opto
@@ -23,3 +26,5 @@
 
 
 void initialize_in_out();
+
+#endif

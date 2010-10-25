@@ -12,11 +12,24 @@
 
 #include <avr/interrupt.h>
 
-#define START_TIMER_BEAT TIMSK0 |= (1<<OCIE0A);
+#if defined (__AVR_ATmega8515__)
 
-#define STOP_TIMER_BEAT TIMSK0 &= ~(1<<OCIE0A);
+#	define START_TIMER_BEAT TIMSK |= (1<<OCIE0);
 
-#define TIMER_BEAT_ISRUNNING (TIMSK0 & (1<<OCIE0A))
+#	define STOP_TIMER_BEAT TIMSK &= ~(1<<OCIE0);
+
+#	define TIMER_BEAT_ISRUNNING (TIMSK & (1<<OCIE0))
+
+#elif defined (__AVR_ATmega48__)
+
+#	define START_TIMER_BEAT TIMSK0 |= (1<<OCIE0A);
+
+#	define STOP_TIMER_BEAT TIMSK0 &= ~(1<<OCIE0A);
+
+#	define TIMER_BEAT_ISRUNNING (TIMSK0 & (1<<OCIE0A))
+
+#endif
+
 
 extern volatile uint8_t beat;
 
