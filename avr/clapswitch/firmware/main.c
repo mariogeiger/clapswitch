@@ -8,30 +8,22 @@
  */
 
 #include <avr/io.h>
-#include <avr/eeprom.h>
 #include "in_out.h"
 #include "timer_beat.h"
 #include "interrupt_clap.h"
 #include "compare.h"
+#include "global.h"
 
 int main(void)
 {
+	initialize_global();
+	
 	initialize_in_out();
 	
 	initialize_timer_beat();
 	
 	initialize_interrupt_clap();
-	
-	{
-		eeprom_busy_wait();
 		
-		rec_size = eeprom_read_byte(&eep_size);
-		
-		uint8_t i;
-		for (i = 0; i < rec_size; ++i)
-			rec_beat[i] = eeprom_read_byte(&eep_beat[i]);
-	}
-	
 	sei();
 	
     

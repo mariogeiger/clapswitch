@@ -26,4 +26,6 @@ void initialize_timer_beat()
 	TCCR0A = (1<<WGM01); // CTC
 	TCCR0B = (1<<CS02) | (1<<CS00); // 1024
 	OCR0A  = 90; // ~12ms
+	
+	beat = 0;
 }

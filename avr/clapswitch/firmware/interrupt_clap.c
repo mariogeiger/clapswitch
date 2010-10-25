@@ -13,6 +13,9 @@
 
 volatile uint8_t flag_clap;
 
+volatile uint8_t tmp_size;
+
+
 ISR(INT0_vect)
 {
 	if (!TIMER_BEAT_ISRUNNING) {
@@ -54,16 +57,20 @@ ISR(INT0_vect)
 			
 		} else {
 			
-			tmp_beat[tmp_size] = beat;			
-			tmp_size++;
+			tmp_beat[tmp_pos] = beat;
+			tmp_pos++;
 			
 			beat = 0;
 			
-			if (tmp_size == rec_size) {
-				STOP_TIMER_BEAT;
-				flag_clap |= (1<<NEEDCOMPARE);
+			if (tmp_pos >= MAXIMUM_BEAT) {
+				tmp_pos = 0;
 			}
 			
+			if (tmp_size >= rec_size) {
+				flag_clap |= (1<<NEEDCOMPARE);
+			} else {
+				tmp_size++;
+			}			
 		}
 	}
 }
@@ -74,4 +81,7 @@ void initialize_interrupt_clap()
 	EIMSK = (1<<INT0); // int0 enabled
 	
 	SREG  = 0x80; // ?
+	
+	flag_clap = 0;
+	tmp_size = 0;
 }

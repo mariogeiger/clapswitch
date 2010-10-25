@@ -25,6 +25,9 @@ extern volatile uint8_t rec_beat[];
 extern volatile uint8_t rec_size;
 
 extern volatile uint8_t tmp_beat[];
-extern volatile uint8_t tmp_size;
+	//extern volatile uint8_t tmp_size;
+extern volatile uint8_t tmp_pos;
+
+void initialize_global();
 
 #endif

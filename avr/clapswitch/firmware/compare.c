@@ -14,15 +14,21 @@
 	//! tolerance in per cent
 #define TOLERANCE 50
 
-uint8_t i;
+uint8_t i, j;
 uint16_t m, n;
 uint16_t delta;
 
 void compare()
 {
-	for (i = 1; i < rec_size; ++i) {
-		m = rec_beat[i - 1] * tmp_beat[i];
-		n = tmp_beat[i - 1] * rec_beat[i];
+	for (i = rec_size - 1, j = tmp_pos - 1;
+		 i > 0; --i, --j) {
+		
+		if (j >= MAXIMUM_BEAT) {
+			j = MAXIMUM_BEAT - 1;
+		}
+		
+		m = rec_beat[i - 1] * tmp_beat[j];
+		n = tmp_beat[j - 1] * rec_beat[i];
 		
 		if (m > n)
 			delta = m - n;
