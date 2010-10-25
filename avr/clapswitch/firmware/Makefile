@@ -14,8 +14,9 @@
 #                is connected.
 # FUSES ........ Parameters for avrdude to flash the fuses appropriately.
 
-DEVICE     = atmega48
-#DEVICE     = atmega8515
+#DEVICE     = atmega48
+DEVICE     = atmega8515
+
 CLOCK      = 8000000
 #PROGRAMMER = -c stk500v2 -P avrdoper
 PROGRAMMER = -c stk500v2 -P /dev/ttyUSB0

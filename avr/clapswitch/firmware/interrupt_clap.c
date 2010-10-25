@@ -77,11 +77,23 @@ ISR(INT0_vect)
 
 void initialize_interrupt_clap()
 {
+#if defined (__AVR_ATmega8515__)
+	
+	MCUCR = (1<<ISC01) | (1<<ISC00); // rising edge	
+	GICR = (1<<INT0); // int0 enabled
+	
+	SREG  = 0x80; // ?
+	
+#elif defined (__AVR_ATmega48__)
+	
 	EICRA = (1<<ISC01) | (1<<ISC00); // rising edge	
 	EIMSK = (1<<INT0); // int0 enabled
 	
 	SREG  = 0x80; // ?
 	
+#endif
+
+		
 	flag_clap = 0;
 	tmp_size = 0;
 }
