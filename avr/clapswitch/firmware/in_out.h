@@ -24,7 +24,12 @@
 #	define RECLEDOFF  PORTC |=  (1<<1);
 
 	// button
-#	define BUTTONPUSHED (PIND & (1<<1))
+#	define BUTTONPUSHED (~PIND & (1<<1))
+
+	// debug
+#	define DBGLEDON   PORTC &= ~(1<<0);
+#	define DBGLEDOFF  PORTC |=  (1<<0);
+#	define DBGLEDSW   PORTC ^=  (1<<0);
 
 #elif defined (__AVR_ATmega48__)
 

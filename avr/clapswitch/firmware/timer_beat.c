@@ -33,9 +33,9 @@ void initialize_timer_beat()
 {
 #if defined (__AVR_ATmega8515__)
 	
-	TCCR0 = (1<<WGM01); // CTC
-	TCCR0 = (1<<CS02) | (1<<CS00); // 1024
-	OCR0  = 90; // ~12ms
+	TCCR0  = (1<<WGM01); // CTC
+	TCCR0 |= (1<<CS02); // 256
+	OCR0   = 180; // ~12ms
 	
 #elif defined (__AVR_ATmega48__)
 

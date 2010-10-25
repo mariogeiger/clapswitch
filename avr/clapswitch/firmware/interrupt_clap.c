@@ -10,6 +10,7 @@
 #include "interrupt_clap.h"
 #include "timer_beat.h"
 #include "global.h"
+#include "in_out.h"
 
 volatile uint8_t flag_clap;
 
@@ -40,6 +41,12 @@ ISR(INT0_vect)
 		}
 		
 	} else {
+	
+#if defined (__AVR_ATmega8515__)
+		if (beat < 15) {
+			return;
+		}
+#endif
 		
 		if (record_state == RUNNING) {
 			
@@ -51,8 +58,9 @@ ISR(INT0_vect)
 			
 			beat = 0;
 			
-			if (rec_size == MAXIMUM_BEAT) {
+			if (rec_size >= MAXIMUM_BEAT) {
 				STOP_TIMER_BEAT;
+				RECLEDOFF;
 			}
 			
 		} else {
@@ -66,20 +74,21 @@ ISR(INT0_vect)
 				tmp_pos = 0;
 			}
 			
-			if (tmp_size >= rec_size) {
+			if (tmp_size >= rec_size - 1) {
 				flag_clap |= (1<<NEEDCOMPARE);
 			} else {
 				tmp_size++;
 			}
 		}
 	}
+	//DBGLEDSW;
 }
 
 void initialize_interrupt_clap()
 {
 #if defined (__AVR_ATmega8515__)
 	
-	MCUCR = (1<<ISC01) | (1<<ISC00); // rising edge	
+	MCUCR = (1<<ISC01); // falling edge
 	GICR = (1<<INT0); // int0 enabled
 	
 	SREG  = 0x80; // ?

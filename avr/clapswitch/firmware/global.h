@@ -17,15 +17,14 @@
 #define RUNNING  2
 extern volatile uint8_t record_state;
 
-#define MAXIMUM_BEAT 20
-extern uint8_t /*EEMEM*/ eep_beat[];
-extern uint8_t /*EEMEM*/ eep_size;
+#define MAXIMUM_BEAT 32
+extern uint8_t eep_beat[];
+extern uint8_t eep_size;
 
 extern volatile uint8_t rec_beat[];
 extern volatile uint8_t rec_size;
 
 extern volatile uint8_t tmp_beat[];
-	//extern volatile uint8_t tmp_size;
 extern volatile uint8_t tmp_pos;
 
 void initialize_global();

@@ -10,15 +10,30 @@
 #include "in_out.h"
 
 void initialize_in_out()
-{
-		// opto
+{		
+#if defined (__AVR_ATmega8515__)
+
+	// opto
 	DDRC = (1<<2);
 	OPTOOFF;
-	
-		// recled
-	DDRC |= (1<<3);
+
+	// recled
+	DDRC |= (1<<1);
 	RECLEDOFF;
 	
-		// button
-		// pull-up : no
+	// debug
+	DDRC |= (1<<0);
+	DBGLEDOFF;
+
+#elif defined (__AVR_ATmega48__)
+
+	// opto
+	DDRC = (1<<2);
+	OPTOOFF;
+
+	// recled
+	DDRC |= (1<<1);
+	RECLEDOFF;
+
+#endif
 }

@@ -19,7 +19,6 @@ volatile uint8_t rec_beat[MAXIMUM_BEAT];
 volatile uint8_t rec_size;
 
 volatile uint8_t tmp_beat[MAXIMUM_BEAT];
-	//volatile uint8_t tmp_size;
 volatile uint8_t tmp_pos;
 
 void initialize_global()
@@ -34,6 +33,5 @@ void initialize_global()
 	for (i = 0; i < rec_size; ++i)
 		rec_beat[i] = eeprom_read_byte(&eep_beat[i]);
 
-		//	tmp_size = 0;
 	tmp_pos = 0;
 }

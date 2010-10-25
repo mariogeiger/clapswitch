@@ -12,7 +12,7 @@
 #include "in_out.h"
 
 	//! tolerance in per cent
-#define TOLERANCE 50
+#define TOLERANCE 40
 
 uint8_t i, j;
 uint16_t m, n;
