@@ -70,7 +70,7 @@ ISR(INT0_vect)
 				flag_clap |= (1<<NEEDCOMPARE);
 			} else {
 				tmp_size++;
-			}			
+			}
 		}
 	}
 }

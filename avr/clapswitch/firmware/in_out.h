@@ -12,19 +12,36 @@
 
 #include <avr/io.h>
 
+#if defined (__AVR_ATmega8515__)
+
 	// opto
-#define SWITCHOPTO PORTC ^=  (1<<2);
-#define OPTOON     PORTC &= ~(1<<2);
-#define OPTOOFF    PORTC |=  (1<<2);
+#	define SWITCHOPTO PORTC ^=  (1<<2);
+#	define OPTOON     PORTC &= ~(1<<2);
+#	define OPTOOFF    PORTC |=  (1<<2);
 
 	// recled
-#define RECLEDON   PORTC &= ~(1<<3);
-#define RECLEDOFF  PORTC |=  (1<<3);
+#	define RECLEDON   PORTC &= ~(1<<1);
+#	define RECLEDOFF  PORTC |=  (1<<1);
 
 	// button
-#define BUTTONPUSHED (PINC & (1<<4))
+#	define BUTTONPUSHED (PIND & (1<<1))
 
+#elif defined (__AVR_ATmega48__)
+
+	// opto
+#	define SWITCHOPTO PORTC ^=  (1<<2);
+#	define OPTOON     PORTC &= ~(1<<2);
+#	define OPTOOFF    PORTC |=  (1<<2);
+
+	// recled
+#	define RECLEDON   PORTC &= ~(1<<1);
+#	define RECLEDOFF  PORTC |=  (1<<1);
+
+	// button
+#	define BUTTONPUSHED (PIND & (1<<1))
+
+#endif
 
 void initialize_in_out();
 
-#endif
+#endif /* IN_OUT_H */
