@@ -24,7 +24,7 @@
 #	define RECLEDOFF  PORTC |=  (1<<1);
 
 	// button
-#	define BUTTONPUSHED (~PIND & (1<<1))
+#	define RECBUT (~PIND & (1<<1))
 
 	// debug
 #	define DBGLEDSW   PORTC ^=  (1<<0);
@@ -43,7 +43,7 @@
 #	define RECLEDOFF  PORTC |=  (1<<1);
 
 	// button
-#	define BUTTONPUSHED (PIND & (1<<1))
+#	define RECBUT (PIND & (1<<1))
 
 #endif
 

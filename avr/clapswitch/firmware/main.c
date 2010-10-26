@@ -28,7 +28,7 @@ int main(void)
 	
     
 	for(;;){
-		if (BUTTONPUSHED) {
+		if (RECBUT) {
 			STOP_TIMER_BEAT;
 			record_state = PENDING;
 			
