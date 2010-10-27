@@ -19,12 +19,15 @@
 #	define OPTOON     PORTC &= ~(1<<2);
 #	define OPTOOFF    PORTC |=  (1<<2);
 
-	// recled
+	// rec led
 #	define RECLEDON   PORTC &= ~(1<<1);
 #	define RECLEDOFF  PORTC |=  (1<<1);
 
-	// button
+	// rec button
 #	define RECBUT (~PIND & (1<<1))
+
+	// clap button
+#	define CLAPBUT (~PIND & (1<<2))
 
 	// debug
 #	define DBGLEDSW   PORTC ^=  (1<<0);
@@ -38,11 +41,11 @@
 #	define OPTOON     PORTC &= ~(1<<2);
 #	define OPTOOFF    PORTC |=  (1<<2);
 
-	// recled
+	// rec led
 #	define RECLEDON   PORTC &= ~(1<<1);
 #	define RECLEDOFF  PORTC |=  (1<<1);
 
-	// button
+	// rec button
 #	define RECBUT (PIND & (1<<1))
 
 #endif

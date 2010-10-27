@@ -17,7 +17,13 @@ volatile uint8_t flag_clap;
 volatile uint8_t tmp_size;
 
 
+#if defined (__AVR_ATmega8515__)
+void clap()
+
+#elif (__AVR_ATmega48__)
 ISR(INT0_vect)
+
+#endif
 {
 	if (!TIMER_BEAT_ISRUNNING) {
 		
@@ -41,12 +47,6 @@ ISR(INT0_vect)
 		}
 		
 	} else {
-	
-#if defined (__AVR_ATmega8515__)
-		if (beat < 15) {
-			return;
-		}
-#endif
 		
 		if (record_state == RUNNING) {
 			
@@ -81,17 +81,17 @@ ISR(INT0_vect)
 			}
 		}
 	}
-	//DBGLEDSW;
+		//DBGLEDSW;
 }
 
 void initialize_interrupt_clap()
 {
 #if defined (__AVR_ATmega8515__)
 	
-	MCUCR = (1<<ISC01); // falling edge
-	GICR = (1<<INT0); // int0 enabled
-	
-	SREG  = 0x80; // ?
+		//	MCUCR = (1<<ISC01); // falling edge
+		//	GICR = (1<<INT0); // int0 enabled
+		//	
+		//	SREG  = 0x80; // ?
 	
 #elif defined (__AVR_ATmega48__)
 	
@@ -101,8 +101,8 @@ void initialize_interrupt_clap()
 	SREG  = 0x80; // ?
 	
 #endif
-
-		
+	
+	
 	flag_clap = 0;
 	tmp_size = 0;
 }

@@ -16,6 +16,10 @@
 #define NEEDCOMPARE 0
 extern volatile uint8_t flag_clap;
 
+#if defined (__AVR_ATmega8515__)
+void clap();
+#endif
+
 void initialize_interrupt_clap();
 
 #endif
