@@ -15,6 +15,8 @@ volatile uint8_t record_state;
 uint8_t EEMEM eep_beat[MAXIMUM_BEAT];
 uint8_t EEMEM eep_size;
 
+	//! epp_beat2
+
 volatile uint8_t rec_beat[MAXIMUM_BEAT];
 volatile uint8_t rec_size;
 

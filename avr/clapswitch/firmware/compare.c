@@ -27,6 +27,8 @@ void compare()
 			j = MAXIMUM_BEAT - 1;
 		}
 		
+			//! comparer avec rec_beat1 ou rec_beat2
+			//! selon OPTO
 		m = rec_beat[i - 1] * tmp_beat[j];
 		n = tmp_beat[j - 1] * rec_beat[i];
 		

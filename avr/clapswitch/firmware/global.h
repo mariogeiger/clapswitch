@@ -24,6 +24,9 @@ extern uint8_t eep_size;
 extern volatile uint8_t rec_beat[];
 extern volatile uint8_t rec_size;
 
+	//! ajouter rec_beat2[]
+	//! re rec_size2
+
 extern volatile uint8_t tmp_beat[];
 extern volatile uint8_t tmp_pos;
 
