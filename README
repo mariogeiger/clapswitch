@@ -1,6 +1,22 @@
-- appuie sur le bouton rec.
-- attends le premier clap.
-- enregistre les clap.
-- si pandant X temps il n'y a pas de clap, il arrête d'enregistrer.
+0: Installation
+ X = Lampe
+ C = "clapswitch"
+ S = Prise secteur
 
-Compare avec une tolérance et avec une gestion du changement du tempo (acceleration deceleration).
+  |X|-----------|S|
+
+ - débranche une lampe du secteur.
+
+  |X|----   ----|S|
+
+ - branche le "clapswitch" entre ta lampe et le secteur.
+
+  |X|----|C|----|S|
+
+1: Configuration
+ - appuie sur le bouton rec.
+ - tape un rythme dans tes mains.
+
+2: Utilisation
+ - tape le même rythme dans tes mains.
+ - "clapswitch" allume la lampe.
