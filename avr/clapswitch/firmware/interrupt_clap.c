@@ -21,7 +21,7 @@ volatile uint8_t tmp_size;
 void clap()
 
 #elif (__AVR_ATmega48__)
-ISR(INT0_vect)
+ISR(INT1_vect)
 
 #endif
 {
@@ -95,8 +95,8 @@ void initialize_interrupt_clap()
 	
 #elif defined (__AVR_ATmega48__)
 	
-	EICRA = (1<<ISC01) | (1<<ISC00); // rising edge	
-	EIMSK = (1<<INT0); // int0 enabled
+	EICRA = (1<<ISC11) | (1<<ISC10); // rising edge	
+	EIMSK = (1<<INT1); // int1 enabled
 	
 	SREG  = 0x80; // ?
 	
