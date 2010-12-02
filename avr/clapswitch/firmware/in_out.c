@@ -28,11 +28,11 @@ void initialize_in_out()
 #elif defined (__AVR_ATmega48__)
 
 	// opto
-	DDRC = (1<<2);
+	DDRB = (1<<2);
 	OPTOOFF;
 
 	// recled
-	DDRC |= (1<<1);
+	DDRB |= (1<<1);
 	RECLEDOFF;
 
 #endif
