@@ -1,6 +1,60 @@
-- appuie sur le bouton rec.
-- attends le premier clap.
-- enregistre les clap.
-- si pandant X temps il n'y a pas de clap, il arrête d'enregistrer.
+      _                          _ _       _     
+  ___| | __ _ _ __  _____      _(_) |_ ___| |__  
+ / __| |/ _` | '_ \/ __\ \ /\ / / | __/ __| '_ \ 
+| (__| | (_| | |_) \__ \\ V  V /| | || (__| | | |
+ \___|_|\__,_| .__/|___/ \_/\_/ |_|\__\___|_| |_|
+             |_|                                 
 
-Compare avec une tolérance et avec une gestion du changement du tempo (acceleration deceleration).
+
+[English]
+	0: Setup
+	 X = Lampe
+	 C = "clapswitch"
+	 S = AC outlet
+
+	  |X|-----------|S|
+
+	 - Unplug a lamp from the AC outlet
+
+	  |X|----   ----|S|
+
+	 - Between the lamp and the AC outlet, plug the "clapswitch".
+
+	  |X|----|C|----|S|
+
+	1: Set
+	 - Press the rec button.
+	 - Hit a rhythm in your hands.
+
+	2: Use
+	 - Hit the same rhythm in your hands.
+	 - "clapswitch" lit the lamp.
+
+
+
+
+[Français]
+	0: Installation
+	 X = Lampe
+	 C = "clapswitch"
+	 S = Prise secteur
+
+	  |X|-----------|S|
+
+	 - Débranche une lampe du secteur.
+
+	  |X|----   ----|S|
+
+	 - Dranche le "clapswitch" entre ta lampe et le secteur.
+
+	  |X|----|C|----|S|
+
+	1: Configuration
+	 - Appuie sur le bouton rec.
+	 - Tape un rythme dans tes mains.
+
+	2: Utilisation
+	 - Tape le même rythme dans tes mains.
+	 - "clapswitch" allume la lampe.
+
+

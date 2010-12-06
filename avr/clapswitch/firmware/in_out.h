@@ -37,18 +37,17 @@
 
 #elif defined (__AVR_ATmega48__)
 
-	// opto
-#	define OPTOSW     PORTC ^=  (1<<2);
-#	define OPTOON     PORTC &= ~(1<<2);
-#	define OPTOOFF    PORTC |=  (1<<2);
-#	define OPTO       (PINC & (1<<2))
+	// opto *16*
+#	define OPTOSW     PORTB ^=  (1<<2);
+#	define OPTOON     PORTB &= ~(1<<2);
+#	define OPTOOFF    PORTB |=  (1<<2);
 
-	// rec led
-#	define RECLEDON   PORTC &= ~(1<<1);
-#	define RECLEDOFF  PORTC |=  (1<<1);
+	// rec led *15*
+#	define RECLEDON   PORTB &= ~(1<<1);
+#	define RECLEDOFF  PORTB |=  (1<<1);
 
-	// rec button
-#	define RECBUT     (PIND & (1<<1))
+	// rec button *4*
+#	define RECBUT     (PIND & (1<<2))
 
 #endif
 
