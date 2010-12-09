@@ -13,6 +13,10 @@
 #include "interrupt_clap.h"
 #include "compare.h"
 #include "global.h"
+#include "adc.h"
+
+uint8_t curr_sound;
+uint8_t last_sound;
 
 int main(void)
 {
@@ -29,18 +33,30 @@ int main(void)
     
 	for(;;){
 		
-		if (RECBUT) {
-			STOP_TIMER_BEAT;
-			record_state = PENDING;
+		ADC_START;
+		
+		do {
+			if (RECBUT) {
+				STOP_TIMER_BEAT;
+				record_state = PENDING;
 			
-			RECLEDON;
+				RECLEDON;
+			}
+		
+			if (flag_clap & (1<<NEEDCOMPARE)) {
+				flag_clap &= ~(1<<NEEDCOMPARE);
+			
+				compare();
+			}
+		} while (ADC_RUN);
+		
+		curr_sound = adc_value();
+		
+		if (curr_sound > last_sound / 2 * 3) {
+			interrupt_clap();
 		}
 		
-		if (flag_clap & (1<<NEEDCOMPARE)) {
-			flag_clap &= ~(1<<NEEDCOMPARE);
-			
-			compare();
-		}
+		last_sound = curr_sound;
     }
 	
     return 0;

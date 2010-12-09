@@ -17,7 +17,7 @@ volatile uint8_t flag_clap;
 volatile uint8_t tmp_size;
 
 
-ISR(INT1_vect)
+void interrupt_clap()
 {
 	if (!TIMER_BEAT_ISRUNNING) {
 		
@@ -79,12 +79,7 @@ ISR(INT1_vect)
 }
 
 void initialize_interrupt_clap()
-{
-	EICRA = (1<<ISC11) | (1<<ISC10); // rising edge	
-	EIMSK = (1<<INT1); // int1 enabled
-	
-	SREG  = 0x80; // ?
-	
+{	
 	flag_clap = 0;
 	tmp_size = 0;
 }

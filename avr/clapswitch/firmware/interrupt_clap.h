@@ -10,12 +10,12 @@
 #ifndef INTERRUPT_CLAP_H
 #define INTERRUPT_CLAP_H
 
-#include <avr/interrupt.h>
 #include <avr/eeprom.h>
 
 #define NEEDCOMPARE 0
 extern volatile uint8_t flag_clap;
 
+void interrupt_clap();
 void initialize_interrupt_clap();
 
 #endif
