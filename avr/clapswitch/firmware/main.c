@@ -52,7 +52,7 @@ int main(void)
 		
 		curr_sound = adc_value();
 		
-		if (curr_sound > last_sound / 2 * 3) {
+		if (curr_sound > last_sound * 2) {
 			interrupt_clap();
 		}
 		
