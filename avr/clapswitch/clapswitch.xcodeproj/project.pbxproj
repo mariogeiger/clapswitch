@@ -9,6 +9,8 @@
 /* Begin PBXFileReference section */
 		4079525E0CEA38CC00E202DC /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		4079525F0CEA38CC00E202DC /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		AC442BDB12B105F4004B3E34 /* adc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = adc.h; sourceTree = "<group>"; };
+		AC442BDC12B105F4004B3E34 /* adc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = adc.c; sourceTree = "<group>"; };
 		AC56A377126C6FA200C61664 /* interrupt_clap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interrupt_clap.h; sourceTree = "<group>"; };
 		AC56A378126C6FA200C61664 /* interrupt_clap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = interrupt_clap.c; sourceTree = "<group>"; };
 		ACC24D59126E11260003C0CD /* in_out.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = in_out.h; sourceTree = "<group>"; };
@@ -44,6 +46,8 @@
 				ACC84EBD1274F1590016AA3D /* compare.c */,
 				ACC84ED01274F4410016AA3D /* global.h */,
 				ACC84ED11274F4410016AA3D /* global.c */,
+				AC442BDB12B105F4004B3E34 /* adc.h */,
+				AC442BDC12B105F4004B3E34 /* adc.c */,
 			);
 			path = firmware;
 			sourceTree = "<group>";
