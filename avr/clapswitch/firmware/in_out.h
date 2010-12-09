@@ -12,43 +12,18 @@
 
 #include <avr/io.h>
 
-#if defined (__AVR_ATmega8515__)
-
-	// opto
-#	define OPTOSW     PORTC ^=  (1<<2);
-#	define OPTOON     PORTC &= ~(1<<2);
-#	define OPTOOFF    PORTC |=  (1<<2);
-
-	// rec led
-#	define RECLEDON   PORTC &= ~(1<<1);
-#	define RECLEDOFF  PORTC |=  (1<<1);
-
-	// rec button
-#	define RECBUT     (~PIND & (1<<1))
-
-	// clap button
-#	define CLAPBUT    (~PIND & (1<<2))
-
-	// debug
-#	define DBGLEDSW   PORTC ^=  (1<<0);
-#	define DBGLEDON   PORTC &= ~(1<<0);
-#	define DBGLEDOFF  PORTC |=  (1<<0);
-
-#elif defined (__AVR_ATmega48__)
-
 	// opto *16*
-#	define OPTOSW     PORTB ^=  (1<<2);
-#	define OPTOON     PORTB &= ~(1<<2);
-#	define OPTOOFF    PORTB |=  (1<<2);
+#define OPTOSW     PORTB ^=  (1<<2);
+#define OPTOON     PORTB &= ~(1<<2);
+#define OPTOOFF    PORTB |=  (1<<2);
 
 	// rec led *15*
-#	define RECLEDON   PORTB &= ~(1<<1);
-#	define RECLEDOFF  PORTB |=  (1<<1);
+#define RECLEDON   PORTB &= ~(1<<1);
+#define RECLEDOFF  PORTB |=  (1<<1);
 
 	// rec button *4*
-#	define RECBUT     (PIND & (1<<2))
+#define RECBUT     (!(PIND & (1<<2)))
 
-#endif
 
 void initialize_in_out();
 

@@ -17,13 +17,7 @@ volatile uint8_t flag_clap;
 volatile uint8_t tmp_size;
 
 
-#if defined (__AVR_ATmega8515__)
-void clap()
-
-#elif (__AVR_ATmega48__)
 ISR(INT1_vect)
-
-#endif
 {
 	if (!TIMER_BEAT_ISRUNNING) {
 		
@@ -86,22 +80,10 @@ ISR(INT1_vect)
 
 void initialize_interrupt_clap()
 {
-#if defined (__AVR_ATmega8515__)
-	
-		//	MCUCR = (1<<ISC01); // falling edge
-		//	GICR = (1<<INT0); // int0 enabled
-		//	
-		//	SREG  = 0x80; // ?
-	
-#elif defined (__AVR_ATmega48__)
-	
 	EICRA = (1<<ISC11) | (1<<ISC10); // rising edge	
 	EIMSK = (1<<INT1); // int1 enabled
 	
 	SREG  = 0x80; // ?
-	
-#endif
-	
 	
 	flag_clap = 0;
 	tmp_size = 0;

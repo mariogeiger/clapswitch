@@ -14,10 +14,6 @@
 #include "compare.h"
 #include "global.h"
 
-#if defined (__AVR_ATmega8515__)
-uint8_t trigger;
-#endif
-
 int main(void)
 {
 	initialize_global();
@@ -32,20 +28,6 @@ int main(void)
 	
     
 	for(;;){
-#if defined (__AVR_ATmega8515__)
-		if (CLAPBUT) {
-			if (trigger > 200) {
-				trigger = 0;
-				clap();
-			} else {
-				trigger++;
-			}
-		} else {
-			if (trigger > 0) {
-				trigger--;
-			}
-		}
-#endif
 		
 		if (RECBUT) {
 			STOP_TIMER_BEAT;
